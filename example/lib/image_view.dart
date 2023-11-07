@@ -2,9 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 class ImageView extends StatefulWidget {
-  ImageView({
-    this.imagePath
-  });
+  ImageView(this.imagePath);
 
   final String imagePath;
 
@@ -17,9 +15,7 @@ class _ImageViewState extends State<ImageView> {
 
   @override
   Widget build(BuildContext mainContext) {
-    return Center(child: Image.file(
-      File(widget.imagePath),
-      fit: BoxFit.contain
-    ));
+    return Center(
+        child: Image.file(File(widget.imagePath), fit: BoxFit.contain));
   }
 }
